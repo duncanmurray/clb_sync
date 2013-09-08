@@ -5,6 +5,7 @@ import json
 import logging
 import argparse
 import os
+from pyrax import exceptions as e
 
 def main():
 
