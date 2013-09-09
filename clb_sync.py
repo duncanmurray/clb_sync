@@ -25,7 +25,7 @@ from pyrax import exceptions as e
 def main():
 
     # Set default metadata key to search for
-    METAKEY = "MyGroup0"
+    METAKEY = "MyGroup0_clb"
     # Set default metadata value to search for
     METAVALUE = "clb0"
     # Set default location of pyrax configuration file
