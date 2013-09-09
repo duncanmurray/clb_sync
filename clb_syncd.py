@@ -53,7 +53,7 @@ def main():
                         default=METAVALUE)
     # Set argument for the cloud load balancer ID
     parser.add_argument("-i", "--clbid", action="store", required=True,
-                        metavar="CLBID", type=int,
+                        metavar="CLB_ID", type=int,
                         help=("Cloud Load Balancer ID"))
     # Set argument for the pyrax credentials file loacation
     parser.add_argument("-c", "--credfile", action="store", required=False,

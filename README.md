@@ -4,7 +4,7 @@ clb_sync
 A tool to automatically update a Rackspace cloud load balancer when new nodes are created or deleted based on metadata.
 
 ```
-usage: clb_syncd.py [-h] [-r REGION] [-mk META_KEY] [-mv META_VALUE] -i CLBID
+usage: clb_syncd.py [-h] [-r REGION] [-mk META_KEY] [-mv META_VALUE] -i CLB_ID
                     [-c CREDENTIALS_FILE] [-p LOG_DIRECTORY] [-v]
 
 Automatically update load balancer nodes
@@ -18,7 +18,7 @@ optional arguments:
                         Matadata key that desired node has
   -mv META_VALUE, --metavalue META_VALUE
                         Metadata value that desired node has
-  -i CLBID, --clbid CLBID
+  -i CLB_ID, --clbid CLB_ID
                         Cloud Load Balancer ID
   -c CREDENTIALS_FILE, --credfile CREDENTIALS_FILE
                         The location of your pyrax configuration file
@@ -27,18 +27,12 @@ optional arguments:
   -v, --verbose         Turn on debug verbosity
 ```
 
-####PREREQUISITS:
-
-1. Lsyncd installed on master server
-2. Public SSH key added to authorized_keys file in server image or inject it as personality
-3. Meta data key/value pairs on servers created
-
 ####INSTALLATION:
 
 1. Download clb_sync.py
 ```
 git clone https://github.com/duncanmurray/clb_sync.git \
-&& cp clb_sync/clb_sync.py /usr/local/sbin/slb_sync.py
+&& cp clb_sync/clb_sync.py /usr/local/sbin/clb_sync.py
 ```
 
 2. Download and install pyrax
