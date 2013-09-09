@@ -208,7 +208,9 @@ def main():
                 node.delete()
                 pyrax.utils.wait_until(myclb, "status", "ACTIVE", interval=1, 
                                        attempts=30, verbose=v)
-         
+
+    # Let the user know we are done
+    rootLogger.info("Update complete")         
     exit(0)
 
 if __name__ == '__main__':

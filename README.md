@@ -47,10 +47,10 @@ api_key = 01234567890abcdef
 ```
 5. Create cronjob to run clb_sync.py
 ```
-*/2 * * * * /usr/local/sbin/clb_sync.py -v
+*/2 * * * * /usr/local/sbin/clb_sync.py -v -i 205977
 ```
 Or better yet use flock until this script it turned into a deamon.
 ```
-*/2 * * * * /usr/bin/flock -n /var/lock/clb_sync.py.lock -c "/usr/local/sbin/clb_sync.py -v"
+*/2 * * * * /usr/bin/flock -n /var/lock/clb_sync.py.lock -c "/usr/local/sbin/clb_sync.py -v -i 205977"
 ```
 
