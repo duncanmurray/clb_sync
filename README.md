@@ -4,7 +4,7 @@ clb_sync
 A tool to automatically update a Rackspace cloud load balancer when new nodes are created or deleted based on metadata.
 
 ```
-usage: clb_syncd.py [-h] [-r REGION] [-mk META_KEY] [-mv META_VALUE] -i CLB_ID
+usage: clb_sync.py [-h] [-r REGION] [-mk META_KEY] [-mv META_VALUE] -i CLB_ID
                     [-c CREDENTIALS_FILE] [-p LOG_DIRECTORY] [-v]
 
 Automatically update load balancer nodes
@@ -45,7 +45,7 @@ pip install pyrax
 username = myusername
 api_key = 01234567890abcdef
 ```
-5. Create cronjob to run lsyncd_update.py
+5. Create cronjob to run clb_sync.py
 ```
 */2 * * * * /usr/local/sbin/clb_sync.py -v
 ```
