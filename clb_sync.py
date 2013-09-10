@@ -191,7 +191,7 @@ def main():
     # If we have new ip's then add them
     if newips:
         # Let the user know what IP's we are adding
-        rootLogger.warning('New nodes to add to load balancer %i: %s' % (myclb.id, newips))
+        rootLogger.warning('Nodes to add to load balancer %i: %s' % (myclb.id, newips))
         for ip in newips:
             new_node = clb.Node(address=ip, port=myport, condition="ENABLED")
             myclb.add_nodes([new_node])
@@ -202,7 +202,7 @@ def main():
     # If we have old ip'd then remove them
     if oldips:
         # Let the user know what ips' we are removing
-        rootLogger.warning('Old nodes to remove from load balancer %i: %s' % (myclb.id, oldips))
+        rootLogger.warning('Nodes to remove from load balancer %i: %s' % (myclb.id, oldips))
         for node in myclb.nodes:
             if node.address in oldips:
                 node.delete()
